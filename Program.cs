@@ -9,7 +9,13 @@ namespace _1FebbraioEs
 {
     internal class Program
     {
+        static Utente utente1 = new Utente();
         static void Main(string[] args)
+        {
+            
+            menu();
+        }
+        public static void menu()
         {
             Console.WriteLine("===============OPERAZIONI==============");
             Console.WriteLine("Scegli l'operazione da effettuare:");
@@ -20,18 +26,22 @@ namespace _1FebbraioEs
             Console.WriteLine("5.: Esci");
             Console.WriteLine("========================================");
 
-            string scelta =  Console.ReadLine();
+            string scelta = Console.ReadLine();
 
-            Utente utente1 = new Utente();
+            
 
             switch (scelta)
             {
                 case "1":
                     utente1.Login();
                     break;
-                    
+                case "2":
+                    utente1.Logout();
+                    break;
+
             }
-            Console.ReadLine(); 
+            menu();
+            Console.ReadLine();
         }
     }
 
